@@ -1,4 +1,22 @@
 /* Общие стили */
+body {
+  background-color: aliceblue;
+}
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.grandparent {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.block-code {
+  margin-left: 150px
+}
 .parent {
   width: 300px;
   height: 300px;
@@ -11,6 +29,10 @@
   height: 100px;
   padding: 10px;
   font-size: 35px;
+}
+h2 {
+  margin: 0;
+  padding: 0;
 }
 /* Метод 1 */
 .p1 {

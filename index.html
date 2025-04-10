@@ -1,63 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>10 способов выровнять элемент по центру</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
+
 <body>
-  
-  <!-- 1 -->
-  <div class="parent p1">
-    <div class="child c1">1</div>
-  </div>
+  <div class="container">
 
-  <!-- 2 -->
-  <div class="parent p2">
-    <div class="child c2">2</div>
-  </div>
+    <!-- 1 -->
+    <div class="grandparent">
+      <div class="parent p1">
+        <div class="child c1">1</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 1</h2>
+        <pre><code class="language-css">
+        .parent {
+          position: relative;
+        }
+        .child {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 3 -->
-  <div class="parent p3">
-    <div class="child c3">3</div>
-  </div>
+    <!-- 2 -->
+    <div class="grandparent">
+      <div class="parent p2">
+        <div class="child c2">2</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 2</h2>
+        <pre><code class="language-css">
+        .parent {
+          position: relative;
+        }
+        .child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 4 -->
-  <div class="parent p4">
-    <div class="child c4">4</div>
-  </div>
+    <!-- 3 -->
+    <div class="grandparent">
+      <div class="parent p3">
+        <div class="child c3">3</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 3</h2>
+        <pre><code class="language-css">
+        .parent {
+          position: relative;
+        }
+        .child {
+          position: absolute;
+          inset: 0;
+          margin: auto;
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 5 -->
-  <div class="parent p5">
-    <div class="child c5">5</div>
-  </div>
+    <!-- 4 -->
+    <div class="grandparent">
+      <div class="parent p4">
+        <div class="child c4">4</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 4</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: flex;
+          justify-content: center;
+          /* align-items: center; */
+        }
+        .child {
+          align-self: center;
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 6 -->
-  <div class="parent p6">
-    <div class="child c6">6</div>
-  </div>
+    <!-- 5 -->
+    <div class="grandparent">
+      <div class="parent p5">
+        <div class="child c5">5</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 5</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: flex;
+        }
+        .child {
+          margin: auto;
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 7 -->
-  <div class="parent p7">
-    <div class="child c7">7</div>
-  </div>
+    <!-- 6 -->
+    <div class="grandparent">
+      <div class="parent p6">
+        <div class="child c6">6</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 6</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+        }
+        .child {
+          
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 8 -->
-  <div class="parent p8">
-    <div class="child c8">8</div>
-  </div>
+    <!-- 7 -->
+    <div class="grandparent">
+      <div class="parent p7">
+        <div class="child c7">7</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 7</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: grid;
+          place-items: center;
+        }
+        .child {
+          
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 9 -->
-  <div class="parent p9">
-    <div class="child c9">9</div>
-  </div>
+    <!-- 8 -->
+    <div class="grandparent">
+      <div class="parent p8">
+        <div class="child c8">8</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 8</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: grid;
+        }
+        .child {
+          align-self: center;
+          justify-self: center;
+        }
+      </code></pre>
+      </div>
+    </div>
 
-  <!-- 10 -->
-  <div class="parent p10">
-    <div class="child c10">10</div>
-  </div>
+    <!-- 9 -->
+    <div class="grandparent">
+      <div class="parent p9">
+        <div class="child c9">9</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 9</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: grid;
+        }
+        .child {
+          place-self: center;
+        }
+      </code></pre>
+      </div>
+    </div>
 
+    <!-- 10 -->
+    <div class="grandparent">
+      <div class="parent p10">
+        <div class="child c10">10</div>
+      </div>
+      <div class="block-code">
+        <h2>Method 10</h2>
+        <pre><code class="language-css">
+        .parent {
+          display: grid;
+        }
+        .child {
+          margin: auto;
+        }
+      </code></pre>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 </html>
